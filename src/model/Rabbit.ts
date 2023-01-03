@@ -2,14 +2,29 @@
  * EI, SN, FT, PJ
  */
 
+/**
+ * 1 SN
+ * 2 EI
+ * 3 PJ
+ * 4 SN
+ * 5 PJ
+ * 6 EI
+ * 7 FT
+ * 8 SN
+ * 9 EI
+ * 10 FT
+ * 11 PJ
+ * 12 FT
+ */
+
 export const rabbitYearTestList = [
   {
     id: 1,
     quest: "질문 1",
-    type: "EI",
+    type: "SN",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "S", title: "답변 1" },
+      { type: "N", title: "답변 2" },
     ],
   },
   {
@@ -24,28 +39,28 @@ export const rabbitYearTestList = [
   {
     id: 3,
     quest: "질문 3",
-    type: "EI",
+    type: "PJ",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "P", title: "답변 1" },
+      { type: "J", title: "답변 2" },
     ],
   },
   {
     id: 4,
     quest: "질문 4",
-    type: "EI",
+    type: "SN",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "S", title: "답변 1" },
+      { type: "N", title: "답변 2" },
     ],
   },
   {
     id: 5,
     quest: "질문 5",
-    type: "EI",
+    type: "PJ",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "P", title: "답변 1" },
+      { type: "J", title: "답변 2" },
     ],
   },
   {
@@ -60,19 +75,19 @@ export const rabbitYearTestList = [
   {
     id: 7,
     quest: "질문 7",
-    type: "EI",
+    type: "FT",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "F", title: "답변 1" },
+      { type: "T", title: "답변 2" },
     ],
   },
   {
     id: 8,
     quest: "질문 8",
-    type: "EI",
+    type: "SN",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "S", title: "답변 1" },
+      { type: "N", title: "답변 2" },
     ],
   },
   {
@@ -87,28 +102,28 @@ export const rabbitYearTestList = [
   {
     id: 10,
     quest: "질문 10",
-    type: "EI",
+    type: "FT",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "F", title: "답변 1" },
+      { type: "T", title: "답변 2" },
     ],
   },
   {
     id: 11,
     quest: "질문 11",
-    type: "EI",
+    type: "PJ",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "P", title: "답변 1" },
+      { type: "J", title: "답변 2" },
     ],
   },
   {
     id: 12,
     quest: "질문 12",
-    type: "EI",
+    type: "FT",
     answer: [
-      { type: "E", title: "답변 1" },
-      { type: "I", title: "답변 2" },
+      { type: "F", title: "답변 1" },
+      { type: "T", title: "답변 2" },
     ],
   },
 ];

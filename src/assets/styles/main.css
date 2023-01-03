@@ -1,16 +1,71 @@
-.main_wrapper {
-  background-color: bisque;
-  height: 100%;
+.root {
+  margin: 0px;
+  overflow: auto;
 }
 
-.main_layout {
-  background-color: rgb(255, 255, 255);
+.wrapper {
+  background-color: rgb(60, 188, 101);
+  /* background-color: rgb(28, 230, 176); */
+  height: 100%;
+  width: 100%;
+}
+
+.layout {
+  /* background-color: bisque; */
+  /* background-color: rgb(255, 255, 255); */
+  /* background-color: rgba(28, 230, 176, 0.457); */
   height: 100%;
   min-height: calc(100vh - 50px);
   display: flex;
   max-width: 500px;
-  width: 100%;
+  min-width: 300px;
   margin: 0 auto;
 }
 
 /** =================================================== */
+
+.main_wrapper {
+  width: 100%;
+  text-align: center;
+}
+
+.main_header {
+  height: 3.5rem;
+}
+
+.main_body_wrapper {
+  height: calc(100% - 3.5rem);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+}
+
+.main_button_wrapper {
+  display: grid;
+  padding-bottom: 2rem;
+}
+
+.main_button {
+  border-radius: 80px;
+  margin: 8px 16px;
+  height: 60px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  border: 0px;
+}
+
+.main_button:hover {
+  cursor: pointer;
+}
+
+/** =================================================== */
+
+.status_bar_wrapper {
+  padding: 1rem 2rem;
+}
+
+.status_bar {
+  height: 24px;
+  background-color: azure;
+  border-radius: 1em;
+}
