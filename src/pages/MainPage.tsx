@@ -1,14 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { rabbitYearTestList, rabbitYearTestListMj } from "../model/Rabbit";
+import { rabbitYearTestListMj } from "../model/Rabbit";
 import { mbtiElementList } from "../model/Common";
 import MainContainer from "../container/MainContainer";
 
 interface User {
+  id?: number;
   mbti: string;
-  over_days: number;
-  salary: number;
-  sex: string;
+  name: string;
 }
 
 const MainPage = () => {
@@ -16,11 +15,9 @@ const MainPage = () => {
   const [questId, setQuestId] = useState<number>(0);
 
   /**  */
-  const [state, setState] = useState<User>({
+  const [user, setUser] = useState<User>({
     mbti: "",
-    over_days: 0,
-    salary: 0,
-    sex: "",
+    name: "",
   });
 
   /** 질문 */
@@ -79,13 +76,15 @@ const MainPage = () => {
   return (
     <div className="main_wrapper">
       <div className="main_header">
-        {questId !== 0 && "나는 어느 토끼일까?"}
+        <div style={{ fontSize: "1.75rem" }}>
+          {questId !== 0 && "나는 어느 토끼일까?"}
+        </div>
       </div>
       {questId === 0 && (
         <MainContainer
           handleClickStart={handleClickStart}
-          state={state}
-          setState={setState}
+          user={user}
+          setUser={setUser}
         />
       )}
       {typeof nowQuest !== "undefined" && nowQuest?.id < 13 && (
@@ -94,6 +93,7 @@ const MainPage = () => {
             <div className={`status_bar n${nowQuest?.id}`}>
               {/* <div className="status_bar"> */}
               <ul>
+                {/* <img src={`/images/carrot.png`} alt="" height={40} /> */}
                 <li>1</li>
                 <li>2</li>
                 <li>3</li>
@@ -109,7 +109,7 @@ const MainPage = () => {
               </ul>
             </div>
           </div>
-          <div>
+          <div className="test_quest_wrapper">
             <div className="test_quest q">Q.{nowQuest.id}</div>
             <div className="test_quest">{nowQuest.quest}</div>
           </div>
@@ -135,7 +135,10 @@ const MainPage = () => {
       )}
       {questId === 13 && (
         <div className="loading_wrapper">
-          <div>깡 충 깡 충</div>
+          <div>
+            <div>🐰 🥕 🐰 🥕</div>
+            {/* <div>깡 충 깡 충</div> */}
+          </div>
         </div>
       )}
     </div>

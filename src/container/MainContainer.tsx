@@ -2,12 +2,12 @@ import React, { useState, useEffect } from "react";
 import Toast from "./Toast";
 
 interface Props {
-  state: any;
-  setState: any;
+  user: any;
+  setUser: any;
   handleClickStart: () => void;
 }
 
-const MainContainer = ({ state, setState, handleClickStart }: any) => {
+const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
   const [questId, setQuestId] = useState<number>(0);
   const [isOpenShareToast, setIsOpenShareToast] = useState<boolean>(false);
 
@@ -37,21 +37,24 @@ const MainContainer = ({ state, setState, handleClickStart }: any) => {
       {questId === 0 && (
         <div className="main_body_wrapper">
           <div>
-            <span className="main_title">나는 어떤 토끼일까?</span>
+            <div className="main_title_sub">2023</div>
+            <div className="main_title_sub">검은 토끼의 해</div>
+            <div className="main_title">나는 어떤 토끼일까?</div>
           </div>
           <div>
-            <img src="/images/bunny_1.png" alt="" className="" height={300} />
+            {/* <img src="/images/bunny_1.png" alt="" className="" height={300} /> */}
+            <img src="/images/mbti/ISTJ.png" alt="" className="" height={250} />
           </div>
           <div>
             <div className="main_button_wrapper">
               <button
                 className="main_button start"
                 onClick={() => {
-                  //   handleClickNext(1);
+                  // handleClickNext(1);
                   handleClickStart();
                 }}
               >
-                시작 🥕
+                시 작
               </button>
               <button
                 className="main_button share"
@@ -80,16 +83,26 @@ const MainContainer = ({ state, setState, handleClickStart }: any) => {
       {questId === 1 && (
         <div className="main_body_wrapper">
           <div>
-            <span>메인입니다.</span>
+            <span className="main_title">나는 어떤 토끼일까?</span>
           </div>
           <div>
-            <div>내 성별은?</div>
-            <input type="select"></input>
+            <div className="test_quest">{`토끼 나라에 온 걸 환영해!
+이름이 뭐야?`}</div>
+            <input
+              type="select"
+              className="input"
+              maxLength={15}
+              placeholder="나는!"
+              onChange={(e) => {
+                setUser({ name: e.target.value });
+              }}
+            />
           </div>
           <div>
             <div className="main_button_wrapper">
               <button
-                className="main_button"
+                className={`main_button ${user.name.length > 0 && "green"}`}
+                disabled={user.name.length === 0}
                 onClick={() => {
                   //   handleClickNext(2);
                   handleClickStart();

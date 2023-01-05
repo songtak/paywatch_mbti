@@ -15,7 +15,7 @@ const ResultPage = () => {
     (item) => item.type === mbti?.toUpperCase()
   );
 
-  console.log("result", result);
+  // console.log("result", result);
 
   const handleClickShare = () => {
     navigator.clipboard?.writeText(`http://localhost:3000/test/result/${mbti}`);
@@ -42,17 +42,28 @@ const ResultPage = () => {
             <div className="result_title">{result?.title}</div>
           </div>
           <div>
-            <div>이미지</div>
-            <div>{result?.result}</div>
+            <div>
+              <img
+                src={`/images/mbti/${mbti?.toUpperCase()}.png`}
+                alt=""
+                className=""
+                height={250}
+              />
+            </div>
+            <div className="result">{result?.result}</div>
+            <div className="result_ad">페이워치 홍보 글</div>
           </div>
           <div className="main_button_wrapper">
-            <button className="main_button" onClick={handleClickShare}>
+            {/* <button className="main_button" onClick={handleClickShare}>
+              토끼마을 구경가기!
+            </button> */}
+            <button className="main_button start" onClick={handleClickShare}>
               공유하기
             </button>
-            <button className="main_button" onClick={handleClickReTest}>
+            <button className="main_button share" onClick={handleClickReTest}>
               다시하기
             </button>
-            <div>
+            <div style={{ marginBottom: "12px", marginTop: "12px" }}>
               <img
                 src="/images/img_1.png"
                 alt=""
