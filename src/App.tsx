@@ -8,7 +8,7 @@ import "../src/assets/styles/main.css";
 function App() {
   return (
     <div className="wrapper">
-      <BrowserRouter>
+      <BrowserRouter basename="https://songtak.github.io/paywatch_mbti/">
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
