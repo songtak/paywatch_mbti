@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router";
-import { rabbitYearTestList } from "../model/Rabbit";
+import { rabbitYearTestList, rabbitYearTestListMj } from "../model/Rabbit";
 import { mbtiElementList } from "../model/Common";
 import MainContainer from "../container/MainContainer";
 
@@ -26,7 +26,9 @@ const MainPage = () => {
   /** 질문 */
   const [selectedType, setSelectedType] = useState<any>([]);
 
-  const nowQuest = rabbitYearTestList.find((item: any) => item.id === questId);
+  const nowQuest = rabbitYearTestListMj.find(
+    (item: any) => item.id === questId
+  );
 
   /**  */
   const handleClickStart = () => {
@@ -76,19 +78,44 @@ const MainPage = () => {
 
   return (
     <div className="main_wrapper">
-      <div className="main_header"></div>
-      {questId === 0 && <MainContainer handleClickStart={handleClickStart} />}
+      <div className="main_header">
+        {questId !== 0 && "나는 어느 토끼일까?"}
+      </div>
+      {questId === 0 && (
+        <MainContainer
+          handleClickStart={handleClickStart}
+          state={state}
+          setState={setState}
+        />
+      )}
       {typeof nowQuest !== "undefined" && nowQuest?.id < 13 && (
         <div className="main_body_wrapper">
           <div className="status_bar_wrapper">
-            <div className="status_bar"></div>
+            <div className={`status_bar n${nowQuest?.id}`}>
+              {/* <div className="status_bar"> */}
+              <ul>
+                <li>1</li>
+                <li>2</li>
+                <li>3</li>
+                <li>4</li>
+                <li>5</li>
+                <li>6</li>
+                <li>7</li>
+                <li>8</li>
+                <li>9</li>
+                <li>10</li>
+                <li>11</li>
+                <li>12</li>
+              </ul>
+            </div>
           </div>
-
-          {/* <div>Q.{nowQuest.id}</div> */}
-          <div>{nowQuest.quest}</div>
+          <div>
+            <div className="test_quest q">Q.{nowQuest.id}</div>
+            <div className="test_quest">{nowQuest.quest}</div>
+          </div>
           <div className="main_button_wrapper">
             <button
-              className="main_button"
+              className="test_button"
               onClick={() => {
                 handleClickAnswerButton(nowQuest.answer[0].type);
               }}
@@ -96,7 +123,7 @@ const MainPage = () => {
               {nowQuest.answer[0].title}
             </button>
             <button
-              className="main_button"
+              className="test_button"
               onClick={() => {
                 handleClickAnswerButton(nowQuest.answer[1].type);
               }}
@@ -107,9 +134,9 @@ const MainPage = () => {
         </div>
       )}
       {questId === 13 && (
-        <>
-          <div>로딩!</div>
-        </>
+        <div className="loading_wrapper">
+          <div>깡 충 깡 충</div>
+        </div>
       )}
     </div>
   );
