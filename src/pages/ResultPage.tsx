@@ -18,13 +18,15 @@ const ResultPage = () => {
   // console.log("result", result);
 
   const handleClickShare = () => {
-    navigator.clipboard?.writeText(`http://localhost:3000/test/result/${mbti}`);
+    navigator.clipboard?.writeText(
+      `https://songtak.github.io/paywatch_mbti/result/${mbti}`
+    );
     setIsOpenShareToast(true);
   };
 
   /** 테스트 다시하기 */
   const handleClickReTest = () => {
-    navigate("/test/main");
+    navigate("/");
   };
 
   return (

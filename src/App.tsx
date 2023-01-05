@@ -12,9 +12,9 @@ function App() {
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
-            <Route path="/test/main" element={<MainPage />} />
-            <Route path="test/result/:mbti" element={<ResultPage />} />
-            <Route path="farm/:id" element={<MyFarmPage />} />
+            <Route path="/" element={<MainPage />} />
+            <Route path="/result/:mbti" element={<ResultPage />} />
+            <Route path="/farm/:id" element={<MyFarmPage />} />
           </Routes>
         </div>
       </BrowserRouter>

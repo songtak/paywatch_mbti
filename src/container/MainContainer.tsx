@@ -16,7 +16,7 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
   };
 
   const handleClickShare = () => {
-    navigator.clipboard?.writeText("http://localhost:3000/test/main");
+    navigator.clipboard?.writeText("https://songtak.github.io/paywatch_mbti");
     setIsOpenShareToast(true);
   };
 

@@ -64,7 +64,7 @@ const MainPage = () => {
   /** 결과 화면으로 이동 */
   const goResultPage = async () => {
     const mbti = await setMbti();
-    navigate(`/test/result/${mbti}`);
+    navigate(`/result/${mbti}`);
   };
 
   useEffect(() => {
