@@ -8,13 +8,14 @@ import "../src/assets/styles/main.css";
 function App() {
   return (
     <div className="wrapper">
-      <BrowserRouter basename="https://songtak.github.io/paywatch_mbti/">
+      {/* <BrowserRouter> */}
+      <BrowserRouter basename="https://songtak.github.io/paywatch_mbti">
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
-            <Route path="/" element={<MainPage />} />
             <Route path="/result/:mbti" element={<ResultPage />} />
             <Route path="/farm/:id" element={<MyFarmPage />} />
+            <Route path="/" element={<MainPage />} />
           </Routes>
         </div>
       </BrowserRouter>

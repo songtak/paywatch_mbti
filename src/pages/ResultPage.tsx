@@ -53,7 +53,7 @@ const ResultPage = () => {
               />
             </div>
             <div className="result">{result?.result}</div>
-            <div className="result_ad">페이워치 홍보 글</div>
+            <div className="result_ad">토끼는 월급💸 이렇게 관리하세요!</div>
           </div>
           <div className="main_button_wrapper">
             {/* <button className="main_button" onClick={handleClickShare}>

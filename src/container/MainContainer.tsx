@@ -43,7 +43,7 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
           </div>
           <div>
             {/* <img src="/images/bunny_1.png" alt="" className="" height={300} /> */}
-            <img src="/images/mbti/ISTJ.png" alt="" className="" height={250} />
+            <img src="/images/mbti/ISTJ.png" alt="" height={250} />
           </div>
           <div>
             <div className="main_button_wrapper">
