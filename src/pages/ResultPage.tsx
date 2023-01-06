@@ -24,7 +24,7 @@ import ENTJ from "../assets/images/mbti/ENTJ.png";
 import ENTP from "../assets/images/mbti/ENTP.png";
 import ENFJ from "../assets/images/mbti/ENFJ.png";
 import ENFP from "../assets/images/mbti/ENFP.png";
-import AD from "../assets/images/ad.png";
+import AD from "../assets/images/paywatch_banner.png";
 import img_1 from "../assets/images/img_1.png";
 
 import _ from "lodash";
