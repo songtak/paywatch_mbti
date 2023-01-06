@@ -70,16 +70,16 @@ const ResultPage = () => {
         .share({
           title: "나는 어떤 토끼일까? for paywatch",
           text: "2023 계묘년 토끼로 알아보는 성격유형별 월급관리 방법, 나는 어떤 토끼일까?",
-          url: "https://songtak.github.io/paywatch_mbti",
+          url: `https://songtak.github.io/paywatch_mbti/#/result/${mbti}`,
         })
         .then(() => console.log("공유 성공"))
         .catch((error) => console.log("공유 실패", error));
     } else {
-      navigator.clipboard?.writeText("https://songtak.github.io/paywatch_mbti");
+      // navigator.clipboard?.writeText("https://songtak.github.io/paywatch_mbti");
 
-      // navigator.clipboard?.writeText(
-      //   `https://songtak.github.io/paywatch_mbti/result/${mbti}`
-      // );
+      navigator.clipboard?.writeText(
+        `https://songtak.github.io/paywatch_mbti/#/result/${mbti}`
+      );
       setIsOpenShareToast(true);
     }
   };
@@ -195,14 +195,14 @@ const ResultPage = () => {
             {/* <button className="main_button" onClick={handleClickShare}>
               토끼마을 구경가기!
             </button> */}
-            <button
+            {/* <button
               className="main_button start"
               onClick={() => {
                 handleClickDownload();
               }}
             >
               저장하기
-            </button>
+            </button> */}
             <button
               className="main_button start"
               onClick={() => {
