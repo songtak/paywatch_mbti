@@ -18,8 +18,8 @@ function App() {
     <div className="wrapper">
       {/* <BrowserRouter> */}
       {/* <BrowserRouter basename="https://songtak.github.io/paywatch_mbti/"> */}
-      <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}>
-        {/* <HashRouter> */}
+      {/* <BrowserRouter basename={process.env.REACT_APP_PUBLIC_URL}> */}
+      <HashRouter>
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
@@ -28,7 +28,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
