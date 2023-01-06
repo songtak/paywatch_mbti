@@ -9,7 +9,8 @@ function App() {
   return (
     <div className="wrapper">
       {/* <BrowserRouter> */}
-      <BrowserRouter basename="https://songtak.github.io/paywatch_mbti">
+      {/* <BrowserRouter basename="https://songtak.github.io/paywatch_mbti/"> */}
+      <BrowserRouter basename={process.env.PUBLIC_URL}>
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
