@@ -77,7 +77,7 @@ const MainPage = () => {
   return (
     <div className="main_wrapper">
       <div className="main_header">
-        <div style={{ fontSize: "1.75rem" }}>
+        <div style={{ fontSize: "1.5rem" }}>
           {questId !== 0 && "나는 어느 토끼일까?"}
         </div>
       </div>

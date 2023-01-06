@@ -70,7 +70,7 @@ body {
   padding-bottom: 4px;
   font-weight: normal;
   color: rgb(0, 0, 0);
-  font-size: 1.2rem;
+  font-size: 1.15rem;
 }
 .main_button_wrapper {
   margin-top: 40px;
@@ -113,7 +113,9 @@ body {
 }
 
 .test_quest {
-  font-size: 2rem;
+  font-size: 1.7rem;
+  letter-spacing: -0.2px;
+  word-break: keep-all;
   white-space: pre-wrap;
 }
 
@@ -129,6 +131,7 @@ body {
   border: 2px solid rgb(137, 212, 32);
   color: rgb(0, 0, 0);
   background-color: white;
+  word-break: keep-all;
   white-space: pre-wrap;
 }
 
@@ -253,8 +256,7 @@ ul {
 }
 
 .result {
-  white-space: pre-wrap;
-  text-align: justify;
+  text-align: left;
   line-height: 1.7;
   padding: 40px 16px;
   letter-spacing: -0.2px;

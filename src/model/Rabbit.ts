@@ -67,7 +67,11 @@ export const rabbitYearTestListMj = [
     type: "SN",
     answer: [
       { type: "S", title: "아까운 당근.. 내가 얼마나 열심히 키웠는데" },
-      { type: "N", title: "당근이 왜 사라졌지? 관리를 더 철저히 해야겠어" },
+      {
+        type: "N",
+        title: `당근이 왜 사라졌지?
+관리를 더 철저히 해야겠어`,
+      },
     ],
   },
   {
@@ -89,7 +93,8 @@ export const rabbitYearTestListMj = [
     answer: [
       {
         type: "N",
-        title: "이 구멍들은 대체 뭘까? 땅이꺼졌나? 기계로 팠을까?",
+        title: `이 구멍들은 대체 뭘까?
+땅이꺼졌나? 기계로 팠을까?`,
       },
       {
         type: "S",
@@ -100,8 +105,7 @@ export const rabbitYearTestListMj = [
   {
     id: 7,
     quest: `범인은 먹깨비 두더지!
-두더지가 뽑아먹은 당근밭에
-새로운 채소를 심자!`,
+밭에 새로운 채소를 심자!`,
     type: "FT",
     answer: [
       {
@@ -131,8 +135,7 @@ export const rabbitYearTestListMj = [
   {
     id: 9,
     quest: `씨앗을 심기로 한 날
-두더지가 당근과 상추씨를
-잔뜩 가져왔다`,
+두더지가 다양한 씨앗을 잔뜩 가져왔다`,
     type: "FT",
     answer: [
       {
@@ -155,8 +158,8 @@ export const rabbitYearTestListMj = [
       { type: "P", title: "잘자라고 있나 가보자, 물도 줄까?" },
       {
         type: "J",
-        title: `오전 : 해뜨기전에 물주기,
-오후 : 비료 뿌리기 혹시 비올수도 있으니 날씨 체크`,
+        title: `오전:해뜨기전에 물주기,
+오후:비료주기(혹시 비올수도 있어 날씨 체크)`,
       },
     ],
   },
