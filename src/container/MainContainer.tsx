@@ -39,11 +39,13 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
       {questId === 0 && (
         <div className="main_body_wrapper">
           <div>
-            <div className="main_title_sub">2023</div>
-            <div className="main_title_sub">검은 토끼의 해</div>
+            <div className="main_title_sub">2023 검은 토끼의 해</div>
+            <div className="main_title_sub md">
+              토끼로 알아보는 성격유형별 월급관리 방법
+            </div>
             <div className="main_title">나는 어떤 토끼일까?</div>
           </div>
-          <div style={{ marginTop: "40px", marginBottom: "40px" }}>
+          <div className="pd-tb40">
             {/* <img src="/images/bunny_1.png" alt="" className="" height={300} /> */}
             <img src={ISTJ} alt="" height={250} />
             {/* <img src="/images/mbti/ISTJ.png" alt="" height={250} /> */}

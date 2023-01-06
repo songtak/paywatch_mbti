@@ -25,7 +25,10 @@
 }
 
 /** =================================================== */
-
+.pd-tb40 {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
 .main_wrapper {
   width: 100%;
   text-align: center;
@@ -58,7 +61,13 @@
   font-weight: bold;
   color: rgb(160, 223, 71);
 }
-
+.main_title_sub.md {
+  padding-top: 15px;
+  padding-bottom: 4px;
+  font-weight: normal;
+  color: rgb(0, 0, 0);
+  font-size: 1.2rem;
+}
 .main_button_wrapper {
   margin-top: 40px;
   display: grid;
@@ -242,11 +251,9 @@ ul {
 .result {
   white-space: pre-wrap;
   text-align: justify;
-  /* float: inline-start; */
   line-height: 1.7;
-  /* padding-left: 24px; */
-  /* padding-right: 24px; */
-  padding: 40px 24px;
+  padding: 40px 16px;
+  letter-spacing: -0.2px;
 }
 
 .result_ad {
