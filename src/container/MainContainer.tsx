@@ -17,9 +17,21 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
     setQuestId(id);
   };
 
+  /** 공유하기 */
   const handleClickShare = () => {
-    navigator.clipboard?.writeText("https://songtak.github.io/paywatch_mbti");
-    setIsOpenShareToast(true);
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "나는 어떤 토끼일까? for paywatch",
+          text: "2023 계묘년 토끼로 알아보는 성격유형별 월급관리 방법, 나는 어떤 토끼일까?",
+          url: "https://songtak.github.io/paywatch_mbti",
+        })
+        .then(() => console.log("공유 성공"))
+        .catch((error) => console.log("공유 실패", error));
+    } else {
+      navigator.clipboard?.writeText("https://songtak.github.io/paywatch_mbti");
+      setIsOpenShareToast(true);
+    }
   };
 
   /** 새로운 챙으로 페이워치 홈페이지 오픈 */

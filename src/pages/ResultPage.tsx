@@ -3,6 +3,9 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import { rabbitYearResultList } from "../model/Rabbit";
 import Toast from "../container/Toast";
+import domtoimage from "dom-to-image";
+import ReactGA from "react-ga";
+
 import ISTJ from "../assets/images/mbti/ISTJ.png";
 import ISTP from "../assets/images/mbti/ISTP.png";
 import ISFJ from "../assets/images/mbti/ISFJ.png";
@@ -37,16 +40,35 @@ const ResultPage = () => {
   // console.log("result", result);
 
   const handleClickShare = () => {
-    navigator.clipboard?.writeText(
-      `https://songtak.github.io/paywatch_mbti/result/${mbti}`
-    );
-    setIsOpenShareToast(true);
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "나는 어떤 토끼일까? for paywatch",
+          text: "2023 계묘년 토끼로 알아보는 성격유형별 월급관리 방법, 나는 어떤 토끼일까?",
+          url: `https://songtak.github.io/paywatch_mbti/result/${mbti}`,
+        })
+        .then(() => console.log("공유 성공"))
+        .catch((error) => console.log("공유 실패", error));
+    } else {
+      navigator.clipboard?.writeText(
+        `https://songtak.github.io/paywatch_mbti/result/${mbti}`
+      );
+      setIsOpenShareToast(true);
+    }
   };
 
   /** 테스트 다시하기 */
   const handleClickReTest = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    ReactGA.event({
+      category: "mbti_result_view",
+      action: "mbti_result_view",
+      label: "mbti_result_view",
+    });
+  }, []);
 
   return (
     <>
@@ -138,7 +160,17 @@ const ResultPage = () => {
             {/* <button className="main_button" onClick={handleClickShare}>
               토끼마을 구경가기!
             </button> */}
-            <button className="main_button start" onClick={handleClickShare}>
+            <button
+              className="main_button start"
+              onClick={() => {
+                handleClickShare();
+                ReactGA.event({
+                  category: "click_mbti_share",
+                  action: "click_mbti_share",
+                  label: "click_mbti_share",
+                });
+              }}
+            >
               공유하기
             </button>
             <button className="main_button share" onClick={handleClickReTest}>
