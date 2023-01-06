@@ -1,7 +1,9 @@
 * {
   font-family: "Jua", sans-serif;
 }
-
+.result-font {
+  font-family: "Apple SD Gothic Neo", "Apple SD 산돌고딕 Neo", sans-serif;
+}
 /** =================================================== */
 .wrapper {
   background-color: rgb(246, 248, 188);
@@ -58,6 +60,7 @@
 }
 
 .main_button_wrapper {
+  margin-top: 40px;
   display: grid;
   /* padding-bottom: 2rem; */
 }
@@ -92,7 +95,8 @@
 /** =================================================== */
 
 .test_quest_wrapper {
-  height: 18rem;
+  /* height: 6rem; */
+  line-height: 1.7;
 }
 
 .test_quest {
@@ -101,7 +105,7 @@
 }
 
 .test_quest.q {
-  padding-bottom: 4rem;
+  padding-bottom: 1rem;
 }
 
 .test_button {
@@ -110,6 +114,7 @@
   height: 60px;
   font-size: 1rem;
   border: 2px solid rgb(137, 212, 32);
+  color: rgb(0, 0, 0);
   background-color: white;
   white-space: pre-wrap;
 }
@@ -235,7 +240,10 @@ ul {
 }
 
 .result {
-  line-height: 1.5;
+  white-space: pre-wrap;
+  text-align: justify;
+  /* float: inline-start; */
+  line-height: 1.7;
   /* padding-left: 24px; */
   /* padding-right: 24px; */
   padding: 40px 24px;

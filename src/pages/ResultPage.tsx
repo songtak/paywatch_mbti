@@ -122,7 +122,7 @@ const ResultPage = () => {
                 <img src={ENFP} alt="" className="" height={250} />
               )}
             </div>
-            <div className="result">{result?.result}</div>
+            <div className="result result-font">{result?.result}</div>
             <div className="result_ad">
               <img
                 src={AD}

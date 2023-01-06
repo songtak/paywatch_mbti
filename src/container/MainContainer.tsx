@@ -43,7 +43,7 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
             <div className="main_title_sub">검은 토끼의 해</div>
             <div className="main_title">나는 어떤 토끼일까?</div>
           </div>
-          <div>
+          <div style={{ marginTop: "40px", marginBottom: "40px" }}>
             {/* <img src="/images/bunny_1.png" alt="" className="" height={300} /> */}
             <img src={ISTJ} alt="" height={250} />
             {/* <img src="/images/mbti/ISTJ.png" alt="" height={250} /> */}
