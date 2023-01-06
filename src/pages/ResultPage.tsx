@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { rabbitYearResultList } from "../model/Rabbit";
 import Toast from "../container/Toast";
 import domtoimage from "dom-to-image";
+import { saveAs } from "file-saver";
 import ReactGA from "react-ga";
 
 import ISTJ from "../assets/images/mbti/ISTJ.png";
@@ -51,13 +52,16 @@ const ResultPage = () => {
       // loadingStore.endLoading();
       return;
     }
-    domtoimage.toJpeg(resultImageRef.current).then((dataUrl: string) => {
-      // setRegisterCms(dataUrl);
-      var link = document.createElement("a");
-      link.download = "2023_rabbit_paywatch.jpeg";
-      link.href = dataUrl;
-      link.click();
+    domtoimage.toBlob(resultImageRef.current).then((blob: any) => {
+      saveAs(blob, "2023_rabbit_paywatch.jpeg");
     });
+    // domtoimage.toJpeg(resultImageRef.current).then((dataUrl: string) => {
+    //   // setRegisterCms(dataUrl);
+    //   var link = document.createElement("a");
+    //   link.download = "2023_rabbit_paywatch.jpeg";
+    //   link.href = dataUrl;
+    //   link.click();
+    // });
   }, [resultImageRef]);
 
   const handleClickShare = () => {
