@@ -4,6 +4,7 @@ import { useNavigate } from "react-router";
 import { rabbitYearResultList } from "../model/Rabbit";
 import Toast from "../container/Toast";
 import domtoimage from "dom-to-image";
+import ReactGA from "react-ga";
 
 import ISTJ from "../assets/images/mbti/ISTJ.png";
 import ISTP from "../assets/images/mbti/ISTP.png";
@@ -49,6 +50,14 @@ const ResultPage = () => {
   const handleClickReTest = () => {
     navigate("/");
   };
+
+  useEffect(() => {
+    ReactGA.event({
+      category: "mbti_result_view",
+      action: "mbti_result_view",
+      label: "mbti_result_view",
+    });
+  }, []);
 
   return (
     <>
@@ -140,7 +149,17 @@ const ResultPage = () => {
             {/* <button className="main_button" onClick={handleClickShare}>
               토끼마을 구경가기!
             </button> */}
-            <button className="main_button start" onClick={handleClickShare}>
+            <button
+              className="main_button start"
+              onClick={() => {
+                handleClickShare();
+                ReactGA.event({
+                  category: "click_mbti_share",
+                  action: "click_mbti_share",
+                  label: "click_mbti_share",
+                });
+              }}
+            >
               공유하기
             </button>
             <button className="main_button share" onClick={handleClickReTest}>
