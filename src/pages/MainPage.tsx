@@ -3,6 +3,7 @@ import { useNavigate } from "react-router";
 import { rabbitYearTestListMj } from "../model/Rabbit";
 import { mbtiElementList } from "../model/Common";
 import MainContainer from "../container/MainContainer";
+import loading from "../assets/images/loading.gif";
 
 interface User {
   id?: number;
@@ -136,7 +137,9 @@ const MainPage = () => {
       {questId === 13 && (
         <div className="loading_wrapper">
           <div>
-            <div>🐰 🥕 🐰 🥕</div>
+            {/* <div>🐰 🥕 🐰 🥕</div> */}
+            <img src={loading} alt="" className="loading" height={250} />
+
             {/* <div>깡 충 깡 충</div> */}
           </div>
         </div>

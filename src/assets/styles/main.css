@@ -110,6 +110,7 @@
   height: 60px;
   font-size: 1rem;
   border: 2px solid rgb(137, 212, 32);
+  background-color: white;
   white-space: pre-wrap;
 }
 
@@ -218,9 +219,15 @@ ul {
   height: calc(100vh - 6rem);
   line-height: calc(100vh - 6rem);
 }
+
+.loading {
+  height: 130px;
+  /* width: 200px; */
+}
 /** =================================================== */
 .result_title {
   font-size: 2rem;
+  padding-bottom: 20px;
 }
 
 .result_sub_title {
@@ -237,7 +244,9 @@ ul {
 .result_ad {
   padding-bottom: 40px;
 }
-
+.ad_img {
+  width: 100%;
+}
 /** =================================================== */
 .input {
   width: 200px;
