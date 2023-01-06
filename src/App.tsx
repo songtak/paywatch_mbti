@@ -1,7 +1,7 @@
 import React from "react";
 // import logo from './logo.svg';
 // import './App.css';
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, HashRouter } from "react-router-dom";
 import { MainPage, ResultPage, MyFarmPage } from "../src/pages";
 import "../src/assets/styles/main.css";
 
@@ -10,7 +10,8 @@ function App() {
     <div className="wrapper">
       {/* <BrowserRouter> */}
       {/* <BrowserRouter basename="https://songtak.github.io/paywatch_mbti/"> */}
-      <BrowserRouter basename={process.env.PUBLIC_URL}>
+      {/* <BrowserRouter basename={process.env.PUBLIC_URL}> */}
+      <HashRouter>
         {/* <ScrollTop /> */}
         <div className="layout">
           <Routes>
@@ -19,7 +20,7 @@ function App() {
             <Route path="/" element={<MainPage />} />
           </Routes>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </div>
   );
 }
