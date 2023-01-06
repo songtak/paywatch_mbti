@@ -40,10 +40,21 @@ const ResultPage = () => {
   // console.log("result", result);
 
   const handleClickShare = () => {
-    navigator.clipboard?.writeText(
-      `https://songtak.github.io/paywatch_mbti/result/${mbti}`
-    );
-    setIsOpenShareToast(true);
+    if (navigator.share) {
+      navigator
+        .share({
+          title: "나는 어떤 토끼일까? for paywatch",
+          text: "2023 계묘년 토끼로 알아보는 성격유형별 월급관리 방법, 나는 어떤 토끼일까?",
+          url: `https://songtak.github.io/paywatch_mbti/result/${mbti}`,
+        })
+        .then(() => console.log("공유 성공"))
+        .catch((error) => console.log("공유 실패", error));
+    } else {
+      navigator.clipboard?.writeText(
+        `https://songtak.github.io/paywatch_mbti/result/${mbti}`
+      );
+      setIsOpenShareToast(true);
+    }
   };
 
   /** 테스트 다시하기 */
