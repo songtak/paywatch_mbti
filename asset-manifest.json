@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/paywatch_mbti/static/css/main.9f408c6d.css",
-    "main.js": "/paywatch_mbti/static/js/main.2444c97d.js",
+    "main.js": "/paywatch_mbti/static/js/main.a0e1a34d.js",
     "static/js/787.b58bf137.chunk.js": "/paywatch_mbti/static/js/787.b58bf137.chunk.js",
     "static/media/ISFJ.png": "/paywatch_mbti/static/media/ISFJ.04e452cd1024de00c5ee.png",
     "static/media/ISTP.png": "/paywatch_mbti/static/media/ISTP.8d8c556c0aa5d5800753.png",
@@ -23,11 +23,11 @@
     "static/media/ENTJ.png": "/paywatch_mbti/static/media/ENTJ.eded004c232e3835e99b.png",
     "index.html": "/paywatch_mbti/index.html",
     "main.9f408c6d.css.map": "/paywatch_mbti/static/css/main.9f408c6d.css.map",
-    "main.2444c97d.js.map": "/paywatch_mbti/static/js/main.2444c97d.js.map",
+    "main.a0e1a34d.js.map": "/paywatch_mbti/static/js/main.a0e1a34d.js.map",
     "787.b58bf137.chunk.js.map": "/paywatch_mbti/static/js/787.b58bf137.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.9f408c6d.css",
-    "static/js/main.2444c97d.js"
+    "static/js/main.a0e1a34d.js"
   ]
 }
