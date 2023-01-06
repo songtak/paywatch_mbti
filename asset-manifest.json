@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "https://songtak.github.io/paywatch_mbti/static/css/main.73b83d08.css",
-    "main.js": "https://songtak.github.io/paywatch_mbti/static/js/main.f82fdf11.js",
+    "main.js": "https://songtak.github.io/paywatch_mbti/static/js/main.cbfbd5fb.js",
     "static/js/787.b58bf137.chunk.js": "https://songtak.github.io/paywatch_mbti/static/js/787.b58bf137.chunk.js",
     "static/media/ISFJ.png": "https://songtak.github.io/paywatch_mbti/static/media/ISFJ.04e452cd1024de00c5ee.png",
     "static/media/ISTP.png": "https://songtak.github.io/paywatch_mbti/static/media/ISTP.8d8c556c0aa5d5800753.png",
@@ -23,11 +23,11 @@
     "static/media/ENTJ.png": "https://songtak.github.io/paywatch_mbti/static/media/ENTJ.eded004c232e3835e99b.png",
     "index.html": "https://songtak.github.io/paywatch_mbti/index.html",
     "main.73b83d08.css.map": "https://songtak.github.io/paywatch_mbti/static/css/main.73b83d08.css.map",
-    "main.f82fdf11.js.map": "https://songtak.github.io/paywatch_mbti/static/js/main.f82fdf11.js.map",
+    "main.cbfbd5fb.js.map": "https://songtak.github.io/paywatch_mbti/static/js/main.cbfbd5fb.js.map",
     "787.b58bf137.chunk.js.map": "https://songtak.github.io/paywatch_mbti/static/js/787.b58bf137.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.73b83d08.css",
-    "static/js/main.f82fdf11.js"
+    "static/js/main.cbfbd5fb.js"
   ]
 }
