@@ -3,6 +3,8 @@ import { useParams } from "react-router";
 import { useNavigate } from "react-router";
 import { rabbitYearResultList } from "../model/Rabbit";
 import Toast from "../container/Toast";
+import domtoimage from "dom-to-image";
+
 import ISTJ from "../assets/images/mbti/ISTJ.png";
 import ISTP from "../assets/images/mbti/ISTP.png";
 import ISFJ from "../assets/images/mbti/ISFJ.png";
