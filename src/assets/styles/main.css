@@ -260,11 +260,12 @@ ul {
   line-height: 1.7;
   padding: 40px 16px;
   letter-spacing: -0.2px;
+  white-space: pre-wrap;
 }
 
-.result_ad {
+/* .result_ad {
   padding-bottom: 40px;
-}
+} */
 .ad_img {
   width: 100%;
 }

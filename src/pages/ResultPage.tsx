@@ -185,7 +185,7 @@ const ResultPage = () => {
                   alt=""
                   className="ad_img"
                   onClick={() => {
-                    window.open("https://www.paywatch.co.kr/");
+                    window.open("http://tosto.re/paywatch");
                   }}
                 />
               </div>
