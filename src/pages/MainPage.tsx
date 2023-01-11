@@ -48,7 +48,6 @@ const MainPage = () => {
         (cnt: any, element: any) => cnt + (item === element),
         0
       );
-      //   return { type: item, count: count };
       return count;
     });
 
@@ -137,10 +136,7 @@ const MainPage = () => {
       {questId === 13 && (
         <div className="loading_wrapper">
           <div>
-            {/* <div>🐰 🥕 🐰 🥕</div> */}
             <img src={loading} alt="" className="loading" height={250} />
-
-            {/* <div>깡 충 깡 충</div> */}
           </div>
         </div>
       )}

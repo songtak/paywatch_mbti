@@ -40,12 +40,6 @@ const ResultPage = () => {
     (item) => item.type === mbti?.toUpperCase()
   );
 
-  // console.log("result", result);
-
-  // const handleClickDownload = () => {
-  //   //
-  // };
-
   /** 저장하기 */
   const handleClickDownload = useCallback(() => {
     if (resultImageRef.current === null) {
@@ -65,6 +59,11 @@ const ResultPage = () => {
   }, [resultImageRef]);
 
   const handleClickShare = () => {
+    ReactGA.event({
+      category: "click_mbti_share_result",
+      action: "결과페이지 클릭",
+      label: "button",
+    });
     if (navigator.share) {
       navigator
         .share({
@@ -91,9 +90,9 @@ const ResultPage = () => {
 
   useEffect(() => {
     ReactGA.event({
-      category: "mbti_result_view",
-      action: "mbti_result_view",
-      label: "mbti_result_view",
+      category: "view_mbti_result",
+      action: "view_mbti_result",
+      label: "view_mbti_result",
     });
   }, []);
 
@@ -207,11 +206,6 @@ const ResultPage = () => {
               className="main_button start"
               onClick={() => {
                 handleClickShare();
-                ReactGA.event({
-                  category: "click_mbti_share",
-                  action: "click_mbti_share",
-                  label: "click_mbti_share",
-                });
               }}
             >
               공유하기
