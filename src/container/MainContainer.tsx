@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from "react";
+import ReactGA from "react-ga";
+
 import Toast from "./Toast";
 import ISTJ from "../assets/images/mbti/ISTJ.png";
 import img_1 from "../assets/images/img_1.png";
@@ -19,6 +21,15 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
 
   /** 공유하기 */
   const handleClickShare = () => {
+    ReactGA.event({
+      category: "click_mbti_share",
+      action: "메인페이지에서 공유하기",
+      label: "button",
+    });
+    /** @ts-ignore */
+    gtag("event", "click_mbti_share", {
+      screen_name: "main",
+    });
     if (navigator.share) {
       navigator
         .share({
