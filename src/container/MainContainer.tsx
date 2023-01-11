@@ -21,14 +21,14 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
 
   /** 공유하기 */
   const handleClickShare = () => {
-    ReactGA.event({
-      category: "click_mbti_share",
-      action: "메인페이지에서 공유하기",
-      label: "button",
-    });
+    // ReactGA.event({
+    //   category: "click_mbti_share",
+    //   action: "메인페이지에서 공유하기",
+    //   label: "button",
+    // });
     /** @ts-ignore */
     gtag("event", "click_mbti_share", {
-      screen_name: "main",
+      event_label: "공유하기 버튼 클릭",
     });
     if (navigator.share) {
       navigator
