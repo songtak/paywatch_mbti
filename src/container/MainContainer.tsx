@@ -30,6 +30,10 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
     gtag("event", "click_mbti_share", {
       event_label: "공유하기 버튼 클릭",
     });
+    /** @ts-ignore */
+    gtag("event", "click_mbti_paywatch_logo", {
+      event_label: "main",
+    });
     if (navigator.share) {
       navigator
         .share({
