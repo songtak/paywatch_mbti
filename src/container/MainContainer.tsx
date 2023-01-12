@@ -21,19 +21,19 @@ const MainContainer = ({ user, setUser, handleClickStart }: Props) => {
 
   /** 공유하기 */
   const handleClickShare = () => {
-    // ReactGA.event({
-    //   category: "click_mbti_share",
-    //   action: "메인페이지에서 공유하기",
-    //   label: "button",
+    ReactGA.event({
+      category: "click_mbti_share",
+      action: "메인페이지에서 공유하기",
+      label: "button",
+    });
+    // /** @ts-ignore */
+    // gtag("event", "click_mbti_share", {
+    //   event_label: "공유하기 버튼 클릭",
     // });
-    /** @ts-ignore */
-    gtag("event", "click_mbti_share", {
-      event_label: "공유하기 버튼 클릭",
-    });
-    /** @ts-ignore */
-    gtag("event", "click_mbti_paywatch_logo", {
-      event_label: "main",
-    });
+    // /** @ts-ignore */
+    // gtag("event", "click_mbti_paywatch_logo", {
+    //   event_label: "main",
+    // });
     if (navigator.share) {
       navigator
         .share({
