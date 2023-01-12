@@ -59,11 +59,8 @@ const ResultPage = () => {
   }, [resultImageRef]);
 
   const handleClickShare = () => {
-    ReactGA.event({
-      category: "click_mbti_share_result",
-      action: "결과페이지 클릭",
-      label: "button",
-    });
+    /** @ts-ignore */
+    gtag("event", "click_mbti_share", { location: "result" });
     if (navigator.share) {
       navigator
         .share({
@@ -89,10 +86,11 @@ const ResultPage = () => {
   };
 
   useEffect(() => {
-    ReactGA.event({
-      category: "view_mbti_result",
-      action: "view_mbti_result",
-      label: "view_mbti_result",
+    /** @ts-ignore */
+    gtag("config", process.env.REACT_APP_GA_KEY, {
+      page_location: window.location.href,
+      page_path: window.location.pathname,
+      page_title: "view_mbti_result",
     });
   }, []);
 
@@ -185,6 +183,8 @@ const ResultPage = () => {
                   className="ad_img"
                   onClick={() => {
                     window.open("http://tosto.re/paywatch");
+                    /** @ts-ignore */
+                    gtag("event", "click_mbti_store");
                   }}
                 />
               </div>
@@ -222,6 +222,10 @@ const ResultPage = () => {
                 width={80}
                 onClick={() => {
                   window.open("https://www.paywatch.co.kr/");
+                  /** @ts-ignore */
+                  gtag("event", "click_mbti_paywatch_logo", {
+                    location: "result",
+                  });
                 }}
               />
               {/* <img src="/images/img_3.png" alt="" className="" width={20} /> */}

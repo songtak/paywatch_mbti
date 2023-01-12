@@ -11,8 +11,6 @@ const TRACKING_ID: string | undefined = process.env.REACT_APP_GA_KEY;
 ReactGA.pageview(window.location.pathname);
 
 function App() {
-  console.log("process.env.REACT_APP_GA_KEY", process.env.REACT_APP_GA_KEY);
-
   return (
     <div className="wrapper">
       {/* <BrowserRouter> */}
